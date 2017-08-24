@@ -3,6 +3,7 @@
 import numpy as np
 
 
+
 def sigmoid(x):
     """
     Compute the sigmoid function for the input here.
@@ -15,9 +16,9 @@ def sigmoid(x):
     """
 
     ### YOUR CODE HERE
-    raise NotImplementedError
+    #raise NotImplementedError
     ### END YOUR CODE
-
+    s = 1 / (1 + np.exp(-x))
     return s
 
 
@@ -35,7 +36,8 @@ def sigmoid_grad(s):
     """
 
     ### YOUR CODE HERE
-    raise NotImplementedError
+    return (s * (1-s))
+    #raise NotImplementedError
     ### END YOUR CODE
 
     return ds
@@ -78,4 +80,4 @@ def test_sigmoid():
 
 if __name__ == "__main__":
     test_sigmoid_basic();
-    test_sigmoid()
+    #test_sigmoid()
